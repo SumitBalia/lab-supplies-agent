@@ -1,0 +1,19 @@
+services:
+  bench:
+    build: .
+    ports:
+      - '127.0.0.1:3000:3000'
+    environment:
+      MODEL_PROVIDER: ${MODEL_PROVIDER:-demo}
+      MODEL_NAME: ${MODEL_NAME:-gpt-4.1-mini}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3:8b}
+      MOCK_API_KEY: ${MOCK_API_KEY:-local-mock-key}
+      APPROVAL_SECRET: ${APPROVAL_SECRET:-local-approval-secret-change-me}
+      DEMO_USERS_JSON: '${DEMO_USERS_JSON:-{"maya":"demo-maya-token","theo":"demo-theo-token"}}'
+      ALLOW_FAULT_CONTROL: ${ALLOW_FAULT_CONTROL:-true}
+    volumes:
+      - bench-data:/app/data
+volumes:
+  bench-data:

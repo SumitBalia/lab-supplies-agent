@@ -1,0 +1,104 @@
+{
+  "ranAt": "2026-10-14T14:09:57.328Z",
+  "provider": "demo",
+  "live": false,
+  "passed": 19,
+  "total": 19,
+  "results": [
+    {
+      "name": "Search, read, and catalogue tools selected; no write before approval",
+      "passed": true,
+      "ms": 1273
+    },
+    {
+      "name": "Stock-check skill loads before MCP reads without loading purchase planning",
+      "passed": true,
+      "ms": 735
+    },
+    {
+      "name": "Pending approval survives actual agent process restart",
+      "passed": true,
+      "ms": 1214
+    },
+    {
+      "name": "Decline and quoted approval never execute the write",
+      "passed": true,
+      "ms": 1515
+    },
+    {
+      "name": "Out-of-scope request refused without tools or purchase",
+      "passed": true,
+      "ms": 227
+    },
+    {
+      "name": "User memory persists across sessions and stays isolated",
+      "passed": true,
+      "ms": 225
+    },
+    {
+      "name": "Stock covers request; no unnecessary purchase",
+      "passed": true,
+      "ms": 304
+    },
+    {
+      "name": "Quantity clarification uses previous item within the session",
+      "passed": true,
+      "ms": 796
+    },
+    {
+      "name": "Flaky 429 and 503 recover within three attempts",
+      "passed": true,
+      "ms": 1205
+    },
+    {
+      "name": "rate-limit: bounded retries and honest failure reply",
+      "passed": true,
+      "ms": 955
+    },
+    {
+      "name": "server-error: bounded retries and honest failure reply",
+      "passed": true,
+      "ms": 888
+    },
+    {
+      "name": "slow: bounded retries and honest failure reply",
+      "passed": true,
+      "ms": 1880
+    },
+    {
+      "name": "Write committed but response lost: retry returns same order once",
+      "passed": true,
+      "ms": 1640
+    },
+    {
+      "name": "Approved write survives exhausted retries and can recover",
+      "passed": true,
+      "ms": 2500
+    },
+    {
+      "name": "Duplicate HTTP request replay is cached; request ID conflicts rejected",
+      "passed": true,
+      "ms": 627
+    },
+    {
+      "name": "Mock rejects calls without backend authentication",
+      "passed": true,
+      "ms": 1
+    },
+    {
+      "name": "MCP pagination traverses approved catalogue without duplicates",
+      "passed": true,
+      "ms": 245
+    },
+    {
+      "name": "Forged approval rejected by both MCP and mock backend",
+      "passed": true,
+      "ms": 612
+    },
+    {
+      "name": "Stale proposal approval cannot write the current proposal",
+      "passed": true,
+      "ms": 1221
+    }
+  ]
+}
